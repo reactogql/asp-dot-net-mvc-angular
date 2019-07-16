@@ -1,49 +1,41 @@
-<div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
-  <img src="/assets/logo.png" width="100" height="100%" alt="The Logo" />
-</div>
-<table class="table table-sm ">
-  <tr>
-    <th colspan="2" class="bg-info">Book</th>
-  </tr>
+<table class="table table-sm table-striped">
   <tr>
     <th>Title</th>
-    <td>{{ book?.title || "Loading data..." }}</td>
-  </tr>
-  <tr>
-    <th>Writer</th>
-    <td>{{ book?.writer || "Loading data..." }}</td>
-  </tr>
-
-  <tr>
     <th>Category</th>
-    <td>{{ book?.category || "Loading data..." }}</td>
-  </tr>
-  <tr>
-    <th>Description</th>
-    <td>{{ book?.description || "Loading data..." }}</td>
-  </tr>
-  <tr>
     <th>Price</th>
-    <td>{{ book?.price || "Loading data..." }}</td>
+    <th>Publisher</th>
+    <th>Ratings</th>
   </tr>
-  <tr>
-    <th colspan="2" class="bg-info">Publisher</th>
-  </tr>
-  <tr>
-    <th>Name</th>
-    <td>{{ book?.publisher?.name }}</td>
-  </tr>
-  <tr>
-    <th>City</th>
-    <td>{{ book?.publisher?.city }}</td>
-  </tr>
-  <tr>
-    <th>State</th>
-    <td>{{ book?.publisher?.state }}</td>
-  </tr>
-  <tr>
-    <th>Books</th>
-    <td>{{ book?.publisher?.books?.length }}</td>
+  <tr *ngFor="let book of books">
+    <td>{{ book.title }}</td>
+    <td>{{ book.category }}</td>
+    <td>{{ book.price }}</td>
+    <td>{{ book.publisher?.title || "None" }}</td>
+    <td>{{ book.ratings?.length || 0 }}</td>
   </tr>
 </table>
+
+<button class="btn btn-primary m-1" (click)="createBook()">
+  Create Book
+</button>
+<button class="btn btn-primary m-1" (click)="createBookAndPublisher()">
+  Create Book and Publisher
+</button>
+<hr />
+<!-- Replacement Buttons -->
+<button class="btn btn-primary m-1" (click)="replaceBook()">
+  Replace Book
+</button>
+<button class="btn btn-primary m-1" (click)="replacePublisher()">
+  Replace Publisher
+</button>
+<hr />
+<button class="btn btn-primary m-1" (click)="updateBook()">
+  Update Book
+</button>
+<button class="btn btn-primary m-1" (click)="deleteBook()">
+  Delete Book
+</button>
+<button class="btn btn-primary m-1" (click)="deletePublisher()">
+  Delete Publisher
+</button>
