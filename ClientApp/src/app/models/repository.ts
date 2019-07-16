@@ -61,7 +61,12 @@ export class Repository {
     };
     this.http.post<number>(publishersUrl, data).subscribe(res => {
       publisher.publisherId = res;
-      this.publishers.push(publisher);
+      console.log("**************************");
+      console.log(publisher);
+      console.log("**************************");
+      if (this.publishers) {
+        this.publishers.push(publisher);
+      }
       if (book != null) {
         book.publisher = publisher;
         this.createBook(book);

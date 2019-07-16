@@ -57,14 +57,14 @@ export class AppComponent {
   }
 
   replacePublisher() {
-    const s = new Publisher(3, "Modified Studio", "New York", "NY");
+    const s = new Publisher(3, "Modified Publisher", "New York", "NY");
     this.repo.replacePublisher(s);
   }
 
   updateBook() {
     const changes = new Map<string, any>();
-    changes.set("name", "Green Hornet");
-    changes.set("studio", null);
+    changes.set("name", "Green West");
+    changes.set("publisher", null);
     this.repo.updateBook(1, changes);
   }
   deleteBook() {

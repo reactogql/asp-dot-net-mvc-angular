@@ -144,7 +144,7 @@ namespace BookNS.Controllers
             .Include(m => m.Publisher)
             .First(m => m.BookId == id);
             // MovieData mdata = new MovieData { Movie = movie };
-            BookData mdata = new Book { Book = book };
+            BookData mdata = new BookData { Book = book };
             patch.ApplyTo(mdata, ModelState);
             if (ModelState.IsValid && TryValidateModel(mdata))
             {
