@@ -6,9 +6,20 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { ModelModule } from "./models/model.module";
 
+import { BookTableComponent } from "./structure/bookTable.component";
+import { CategoryFilterComponent } from "./structure/categoryFilter.component";
+import { BookDetailComponent } from "./structure/bookDetail.component";
+import { RoutingConfig } from "./app.routing";
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    BookDetailComponent,
+    BookTableComponent,
+    CategoryFilterComponent,
+    AppComponent
+  ],
   imports: [
+    RoutingConfig,
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
     HttpClientModule,
     ModelModule,

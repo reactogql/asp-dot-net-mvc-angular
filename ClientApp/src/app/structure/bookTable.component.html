@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{ book.name }}</td>
+    <td>{{ book.category }}</td>
+    <td>{{ book.price }}</td>
+    <td>
+      <button
+        class="btn btn-primary btn-sm"
+        [routerLink]="['/detail', book.bookId]"
+      >
+        Details
+      </button>
+    </td>
+  </tr>
+</table>

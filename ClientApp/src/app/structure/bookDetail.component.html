@@ -1,0 +1,48 @@
+<table class="table table-striped">
+  <tr>
+    <th colspan="2" class="bg-info">Book</th>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td>{{ book?.name || "No Data" }}</td>
+  </tr>
+  <tr>
+    <th>Writer</th>
+    <td>{{ book?.writer || "No Data" }}</td>
+  </tr>
+  <tr>
+    <th>Category</th>
+    <td>{{ book?.category || "No Data" }}</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>{{ book?.description || "No Data" }}</td>
+  </tr>
+  <tr>
+    <th>Price</th>
+    <td>{{ book?.price || "No Data" }}</td>
+  </tr>
+  <tr>
+    <th colspan="2" class="bg-info">Studio</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <td>{{ book?.publisher?.name }}</td>
+  </tr>
+  <tr>
+    <th>City</th>
+    <td>{{ book?.publisher?.city }}</td>
+  </tr>
+  <tr>
+    <th>State</th>
+    <td>{{ book?.publisher?.state }}</td>
+  </tr>
+  <tr>
+    <th>Books</th>
+    <td>{{ book?.publisher?.books?.length }}</td>
+  </tr>
+</table>
+
+<div class="text-center">
+  <button class="btn btn-primary" routerLink="/table">Back</button>
+</div>
