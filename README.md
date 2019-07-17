@@ -1,5 +1,10 @@
-# asp-dot-net-mvc-angular
+# ASP.NET MVC with Angular 7
 
-ASP.NET core MVC
-An ebook rating application
-Still under development
+## An ebook rating application
+* UI framework used is AngularJS 7
+* MS SQL for backend DB
+
+
+---------------------------
+*Still under development*
+
